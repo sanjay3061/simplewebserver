@@ -1,26 +1,21 @@
-# EX01 Developing a Simple Webserver
-## Date:
-
+# Developing a Simple Webserver
 ## AIM:
 To develop a simple webserver to serve html pages.
 
 ## DESIGN STEPS:
 ### Step 1: 
-HTML content creation.
-
+HTML content creation
 ### Step 2:
-Design of webserver workflow.
-
+Design of webserver workflow
 ### Step 3:
-Implementation using Python code.
-
+Implementation using Python code
 ### Step 4:
 Serving the HTML pages.
-
 ### Step 5:
-Testing the webserver.
+Testing the webserver
 
 ## PROGRAM:
+```
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
 <!DOCTYPE html>
@@ -64,8 +59,13 @@ print("my webserver is running...")
 
 httpd.serve_forever()
 
+```
 
 ## OUTPUT:
+
+![image](https://github.com/jaisurya143/simplewebserver/assets/121999338/7c1d9734-fbd7-40e0-ad46-a3823b87b927)
+
+![image](https://github.com/jaisurya143/simplewebserver/assets/121999338/9dc32b0e-42cd-47a4-898e-0d92002b99a8)
 
 
 ## RESULT:
