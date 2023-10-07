@@ -1,7 +1,7 @@
 # Developing a Simple Webserver
 ## AIM:
 To develop a simple webserver to serve html pages.
-## DAte:07-10-2023
+## DATE:07-10-2023
 ## DESIGN STEPS:
 ### Step 1: 
 HTML content creation
