@@ -21,38 +21,48 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
-from http.server import HTTPServer,BaseHTTPRequestHandler
-
-content='''
-<!doctype html>
+from http.server import HTTPServer, BaseHTTPRequestHandler
+content = """
+<!DOCTYPE html>
 <html>
 <head>
-<title> My Web Server</title>
+<title>My webserver</title>
 </head>
 <body>
-<h1>Top Five Web Application Development Frameworks</h1>
-<h2>1.Django</h2>
-<h2>2. MEAN Stack</h2>
-<h2>3. React </h2>
-<h2>4. Angular </h2>
-<h2>5. Flask </h2>
+<h1>Top 5 Revenue generating software Companies<h1>
+<UL TYPE=“circle”>
+<LI> zoho </LI>		
+<LI> apple </LI>
+<LI> infosys </LI>
+<LI> accenture </LI>
+<LI> microsoft </LI>
+</UL>
 </body>
 </html>
-'''
 
-class MyServer(BaseHTTPRequestHandler):
+"""
+
+class myhandler(BaseHTTPRequestHandler):
+
     def do_GET(self):
-        print("Get request received...")
-        self.send_response(200) 
-        self.send_header("content-type", "text/html")       
+
+        print("request received")
+
+        self.send_response(200)
+
+        self.send_header('content-type', 'text/html; charset=utf-8')
+
         self.end_headers()
+
         self.wfile.write(content.encode())
 
-print("This is my webserver") 
-server_address =('',8000)
-httpd = HTTPServer(server_address,MyServer)
-httpd.serve_forever()
+server_address = ('',8000)
 
+httpd = HTTPServer(server_address,myhandler)
+
+print("my webserver is running...")
+
+httpd.serve_forever()
 
 ## OUTPUT:
 
